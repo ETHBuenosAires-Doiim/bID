@@ -1,0 +1,40 @@
+{
+  "0x8f4d513f178705013ab6975e57d1e8898d9c0ef330cdd543b0762ab869cab5e6": {
+    "contracts": {
+      "0xa72e15b4fc637528e678fdcab66f178b753f609a6d2a66564f1676fde4d51ed3": {
+        "name": "SimpleStorage",
+        "address": "0x04D45b51fe4f00b4478F8b0719Fa779f14c8A194"
+      }
+    },
+    "name": "development"
+  },
+  "0x35d47953d0bd5030e6d7ec518d92bcfe588b5e9d39a0547d51a4ac68d1554f1d": {
+    "contracts": {
+      "0xa72e15b4fc637528e678fdcab66f178b753f609a6d2a66564f1676fde4d51ed3": {
+        "name": "SimpleStorage",
+        "address": "0x04D45b51fe4f00b4478F8b0719Fa779f14c8A194"
+      },
+      "0xaa43c10f065a39aa6bf875fd7d1965d92ff7bbab32a817bb5e15d57e68781643": {
+        "name": "CertifiedIdentity",
+        "address": "0x10Aa1c9C2ad79b240Dc612cd2c0c0f5513bAfF28"
+      },
+      "0x901afee267aee74da66ac0fb6b9a29a23b8cb4da885def55043f3aa0897cb67c": {
+        "name": "DocumentNotorization",
+        "address": "0xd8a512EBD6fd82f44dFFD968EEB0835265497d20"
+      },
+      "0xde60dd151395e84d7a01e1aa9fa7f6f829b5b45487fff06648d73e91c5cc175a": {
+        "name": "IdentityCertifier",
+        "address": "0x494748735312D87C54Ff36E9dc71f90fb800D7Df"
+      },
+      "0xbdc67e612e5a9a4beec42109767d6c7590d7f44eb994ca32a5186222336a69a0": {
+        "name": "Ownable",
+        "address": "0xe5731c3df7a510fba6c5b2766251ce631C6B1d78"
+      },
+      "0x433d6e1ca3b1447665c8515a721db4cc4b3c11ea2411fbfaf5fd9b7ea5610864": {
+        "name": "Ownable",
+        "address": "0x6427A6200Bed37FC1e512BdeA49D25Aa9089CF47"
+      }
+    },
+    "name": "development"
+  }
+}
