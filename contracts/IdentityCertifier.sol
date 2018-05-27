@@ -1,13 +1,13 @@
 pragma solidity ^0.4.23;
 
-// import "openzeppelin-zos/contracts/ownership/Ownable.sol";
+import "./Ownable.sol";
 import "./CertifiedIdentity.sol";
 
 /**
  * @title Identity Certifier and Identity Factory
  * @author Filipe Soccol, Gabriel Oliveira, Marc Queiroz
  */
-contract IdentityCertifier {
+contract IdentityCertifier{
     
     mapping (bytes => address[]) addresses;
     mapping (address => bytes) cids;
@@ -72,7 +72,7 @@ contract IdentityCertifier {
     function getAddresses(bytes _cid) public view returns (address[] adds) {
         return addresses[_cid];
     }
-/*
+
     function getIdentityFromContract(address _address) public view returns (bytes cid) {
         Ownable o = Ownable(_address);
         return cids[o.owner()];
@@ -82,5 +82,5 @@ contract IdentityCertifier {
         Ownable o = Ownable(_address);
         return keccak256(cids[o.owner()]) == keccak256(_cid);
     }
-*/
+
 }

@@ -19,10 +19,7 @@ describe("Identities", function() {
         }
       },
       "IdentityCertifier": {
-        "deploy": true,
-        "afterDeploy": [
-          "accounts[0].transfer(IdentityCertifier.address)"
-        ]
+        "deploy": true
       },
       
     };
@@ -32,9 +29,6 @@ describe("Identities", function() {
     });
   });
 
-  //console.log(IdentityCertifier.balance);
-  console.log()
-
   it("Should deploy a new instance of Identity", async function() {
     //console.log(web3.utils.fromAscii("Filipe"));
     
@@ -43,16 +37,8 @@ describe("Identities", function() {
     console.log("CONTRACT CREATED = "+result.events.IdentityCreated.returnValues.ad);
     var identity = new web3.eth.Contract(CertifiedIdentity._jsonInterface, result.events.IdentityCreated.returnValues.ad);
     console.log("PURPOSE SELECTED = "+ await identity.methods.getKeysByPurpose(1).call());
-    //console.log(identity);
-    
 
-    //result.createIdentity().send();
-    assert.equal(result, 150);
+    assert.equal(result.events.IdentityCreated.returnValues.ad, "0x6512a267aD28dFE41a5846E7aD0B2501633cB3f2");
   });
-/*
-  it("should set constructor value", async function() {
-    let result = await SimpleStorage.methods.storedData().call();
-    assert.equal(result, 100);
-  });
-*/
+
 });

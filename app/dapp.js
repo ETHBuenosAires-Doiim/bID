@@ -57,7 +57,8 @@ class App extends React.Component {
   }
 
   render(){
-    return (<div><h3>Embark - Usage Example</h3>
+    return (
+      <div><h3>Embark - Usage Example</h3>
       <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
         <Tab eventKey={1} title="Blockchain">
           <Blockchain />
