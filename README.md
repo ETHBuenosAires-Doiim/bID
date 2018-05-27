@@ -1,6 +1,8 @@
 # Legally binding blockchain ID
 
+
 ## Link a blockchain private key to a CA key issued by the Brasil government’s root PKI tree. Using ENS for universal login with EIP 1078, EIP 1077 gas relayer, and ERC 725 proxy identity to  empower noobs with a terrific user experience. 
+
 
 * Create a dynamic digital identity that’s issued by certificate authority and link it to a Ethereum/RSK private key so it can be used to provide a secure and uncomplicated way to interact with, the financial system, the judicial system, unions, access public services, interact with the government online systems, pay taxes, claim rights and sign contracts that are legally binding and equivalent to handwritten signatures.
 
