@@ -30,7 +30,7 @@
         if (typeof this.pseudo !== 'undefined' && this.pseudo !== '') {
           Users.create(this.pseudo, {from: window.web3.eth.accounts[0]}).then(tx => {
             console.log(tx)
-            self.$router.push({name: 'Profile', props: { pseudo: this.pseudo }})
+            self.$router.push({name: 'Dashboard', props: { pseudo: this.pseudo }})
           }).catch(err => {
             console.log(err)
           })

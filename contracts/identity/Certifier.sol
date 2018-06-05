@@ -21,11 +21,6 @@ contract Certifier {
     // }
 
     /**
-     * @notice default function allows deposit of ETH
-     */
-    function () public payable {}
-
-    /**
      * @notice Managing certified identities
      * This function will be used by Payable Oracle to create new contracts
      */
@@ -86,5 +81,10 @@ contract Certifier {
         Ownable o = Ownable(_address);
         return keccak256(cids[o.owner()]) == keccak256(_cid);
     }
+
+     /**
+     * @notice default function allows deposit of ETH
+     */
+    function () public payable {}
 
 }
