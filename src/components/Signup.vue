@@ -7,6 +7,9 @@
     <v-flex xs2>
       <v-btn @click="signupUser" color="info">Send</v-btn>
     </v-flex>
+    <v-flex xs2>
+      <v-btn @click="signMessage" color="info">Sign Message</v-btn>
+    </v-flex>
     </v-layout>
   </v-container>
 </template>
@@ -35,6 +38,14 @@
             console.log(err)
           })
         }
+      },
+      signMessage: function () {
+        let msg = 'Eita porra carai'
+        let prefix = '\x19Ethereum Signed Message:\n' + msg.length
+        window.web3.personal.sign(
+          window.web3.toHex(prefix + msg),
+          window.web3.eth.accounts[0],
+          (err, res) => console.log(err, res))
       }
     }
   }

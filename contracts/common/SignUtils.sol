@@ -1,9 +1,9 @@
-pragma solidity ^0.4.21;
+pragma solidity ^0.4.23;
 
 /** 
  * @notice Uses ethereum signed messages
  */
-contract MessageSigned {
+contract SignUtils {
     
     constructor() internal {
 
@@ -46,7 +46,7 @@ contract MessageSigned {
         internal
         returns (bytes32 signHash)
     {
-        signHash = keccak256(abi.encodePacked(_hash));
+        signHash = keccak256(abi.encode("\x19Ethereum Signed Message:\n30',_hash));
     }
 
     /**
