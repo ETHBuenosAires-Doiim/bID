@@ -46,7 +46,7 @@ contract SignUtils {
         internal
         returns (bytes32 signHash)
     {
-        signHash = keccak256(abi.encode("\x19Ethereum Signed Message:\n30',_hash));
+        signHash = keccak256(abi.encode("\x19Ethereum Signed Message:\n30",_hash));
     }
 
     /**

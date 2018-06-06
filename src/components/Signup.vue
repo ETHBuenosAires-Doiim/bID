@@ -45,7 +45,8 @@
         window.web3.personal.sign(
           window.web3.toHex(prefix + msg),
           window.web3.eth.accounts[0],
-          (err, res) => console.log(err, res))
+          (err, res) => console.log(err, res)
+        )
       }
     }
   }

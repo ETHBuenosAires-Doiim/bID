@@ -24,12 +24,14 @@ contract Certifier {
      * @notice Managing certified identities
      * This function will be used by Payable Oracle to create new contracts
      */
-    function createCertifiedIdentity(bytes _cid, bytes32 _address, uint256 _eth) 
+    function createCertifiedIdentity(bytes _cid, address _address, uint256 _eth) 
     public payable returns (address res)
     {
 
         // TODO Check if is Payment Oracle calling
         // TODO Check if contract has gas
+        // TODO Push to addresses the new cid
+        // TODO Instantiate new Identity contract
         /*
         bytes32[] memory ads = new bytes32[](1);
         uint256[] memory purps = new uint256[](1);
@@ -39,15 +41,16 @@ contract Certifier {
         types[0] = 1;
         Identity contractAddress = new Identity(ads,purps,types,1,1,address(this));
         */
-        cids[address(_address)] = _cid;
-        address(_address).transfer(_eth);
+        cids[_address] = _cid;
+        _address.transfer(msg.value);
 
-        // TODO push to cids array the new address
-
-        emit IdentityCreated(address(_address), _eth);
-        return address(_address);
+        emit IdentityCreated(_address, _eth);
+        return _address;
     }
 
+    /**
+     * Recharge identity with ether
+     */
     function rechargeCertifiedIdentity(address _address, uint32 _eth) public payable
     {
         _address.transfer(_eth);
@@ -57,11 +60,9 @@ contract Certifier {
     /**
      * Getting informations from contracts
      */
-
     function getIdentity(address _address) public view returns (bytes cid) {
         return cids[_address];
     }
-
     function getAddresses(bytes _cid) public view returns (address[] adds) {
         return addresses[_cid];
     }
