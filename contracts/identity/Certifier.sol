@@ -1,7 +1,7 @@
 pragma solidity ^0.4.23;
 
 import "../common/Ownable.sol";
-// import "./Identity.sol";
+import "./ClaimableIdentity.sol";
 
 /**
  * @title Identity Certifier
@@ -32,18 +32,31 @@ contract Certifier {
         // TODO Check if contract has gas
         // TODO Push to addresses the new cid
         // TODO Instantiate new Identity contract
-        /*
+        
         bytes32[] memory ads = new bytes32[](1);
         uint256[] memory purps = new uint256[](1);
         uint256[] memory types = new uint256[](1);
-        ads[0] = _address;
+        // ads[0] = _address;
         purps[0] = 1;
         types[0] = 1;
-        Identity contractAddress = new Identity(ads,purps,types,1,1,address(this));
-        */
+        // ClaimableIdentity contractAddress = new ClaimableIdentity(ads,purps,types,1,1,address(this));
+        ClaimableIdentity contractAddress = new ClaimableIdentity();
+
         cids[_address] = _cid;
+        address[] memory adrs = new address[](1);
+        adrs[0] = address(contractAddress);
+        addresses[_cid] = adrs;
         _address.transfer(msg.value);
 
+        emit IdentityCreated(_address, _eth);
+        return _address;
+    }
+
+    function assignCertifiedIdentity(bytes _cid, address _address, uint256 _eth) 
+    public payable returns (address res)
+    {
+        cids[_address] = _cid;
+        _address.transfer(msg.value);
         emit IdentityCreated(_address, _eth);
         return _address;
     }

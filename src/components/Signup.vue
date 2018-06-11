@@ -42,7 +42,7 @@
       signMessage: function () {
         let msg = 'Eita porra carai'
         let prefix = '\x19Ethereum Signed Message:\n' + msg.length
-        window.web3.personal.sign(
+        window.web3.eth.accounts[0].sign(
           window.web3.toHex(prefix + msg),
           window.web3.eth.accounts[0],
           (err, res) => console.log(err, res)

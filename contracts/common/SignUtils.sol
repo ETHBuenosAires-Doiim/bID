@@ -4,10 +4,6 @@ pragma solidity ^0.4.23;
  * @notice Uses ethereum signed messages
  */
 contract SignUtils {
-    
-    constructor() internal {
-
-    }
 
     /**
      * @notice recovers address who signed the message
@@ -19,7 +15,7 @@ contract SignUtils {
         bytes _messageSignature
     )
         pure
-        internal
+        public
         returns(address) 
     {
         uint8 v;
@@ -43,10 +39,10 @@ contract SignUtils {
         bytes32 _hash
     )
         pure
-        internal
+        public
         returns (bytes32 signHash)
     {
-        signHash = keccak256(abi.encode("\x19Ethereum Signed Message:\n30",_hash));
+        signHash = keccak256(abi.encode("\x19Ethereum Signed Message:\n30",_hash.length,_hash));
     }
 
     /**
@@ -54,7 +50,7 @@ contract SignUtils {
      */
     function signatureSplit(bytes _signature)
         pure
-        internal
+        public
         returns (uint8 v, bytes32 r, bytes32 s)
     {
         // The signature format is a compact form of:
