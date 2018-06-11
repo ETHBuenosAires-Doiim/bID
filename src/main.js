@@ -5,6 +5,7 @@ import App from './App'
 import Web3 from 'web3'
 import router from './router'
 import Vuetify from 'vuetify'
+import Storage from 'vue-ls'
 import 'vuetify/dist/vuetify.min.css'
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
 
@@ -18,6 +19,34 @@ Vue.use(Vuetify, {
     error: '#b71c1c'
   }
 })
+
+var options = {
+  namespace: 'blockid_', // key prefix
+  name: 'ls', // name variable Vue.[ls] or this.[$ls],
+  storage: 'local' // storage name session, local, memory
+}
+Vue.use(Storage, options)
+
+var store = {
+  debug: true,
+  state: {
+    identities: []
+  },
+  addIdentity (identity) {
+    if (this.debug) console.log('Identity added to store: ', identity)
+    this.state.identities.push(identity)
+  },
+  removeIdentity (idx) {
+    if (this.debug) console.log('Idenity removed from store: ', idx)
+    this.state.identities.splice(idx, 1)
+  },
+  getIdentities () {
+    return this.state.identities
+  },
+  clearIdentities () {
+    this.state.identities = []
+  }
+}
 
 window.addEventListener('load', function () {
   if (typeof web3 !== 'undefined') {
@@ -34,7 +63,8 @@ window.addEventListener('load', function () {
     el: '#app',
     router,
     template: '<App/>',
-    components: { App }
+    components: { App },
+    data: store
   })
 })
 

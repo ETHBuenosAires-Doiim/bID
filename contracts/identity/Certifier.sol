@@ -48,8 +48,8 @@ contract Certifier {
         addresses[_cid] = adrs;
         _address.transfer(msg.value);
 
-        emit IdentityCreated(_address, _eth);
-        return _address;
+        emit IdentityCreated(address(contractAddress), _eth);
+        return address(contractAddress);
     }
 
     function assignCertifiedIdentity(bytes _cid, address _address, uint256 _eth) 

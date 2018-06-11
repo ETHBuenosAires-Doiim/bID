@@ -20,6 +20,7 @@
     "material-design-icons-iconfont": "^3.0.3",
     "truffle-contract": "^3.0.0",
     "vue": "^2.5.16",
+    "vue-ls": "^3.0.5",
     "vue-router": "^2.7.0",
     "vuetify": "^1.0.19"
   },
