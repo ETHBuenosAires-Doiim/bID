@@ -69,7 +69,7 @@ export default {
         this.getSignedKey()
         .then(key => {
           let decrypted = aes256.decrypt(key, accountIdentitiesEncrypted)
-          console.log(decrypted)
+          console.log(key)
           let identities = JSON.parse(decrypted)
           this.$root.$data.clearIdentities()
           identities.forEach(id => {
