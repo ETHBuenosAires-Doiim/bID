@@ -1,8 +1,9 @@
-# BlockID - Legally Binding Blockchain Identity
+# bID - Legally Binding Blockchain Identity
 
-### Link a blockchain private key to a CA key issued by the root key of the Brasil government’s PKI tree. Using ENS and [EIP 1078](https://eips.ethereum.org/EIPS/eip-1078) for universal login with, [EIP 1077](https://eips.ethereum.org/EIPS/eip-1077) gas relayer, [ERC 725](https://eips.ethereum.org/EIPS/eip-725) proxy identity, and [ERC 735](https://github.com/ethereum/EIPs/issues/735) claim holder to create a fail-safe key management solution and empower noobs with a terrific user experience.
+### Link a blockchain private key to a CA key issued by the root key of the Brasil government’s PKI tree and to any institution authorised to make claims on behalf of individuals such as issuers of driver’s licences, voter’s tittle, passport, social security, health insurance and so on. Using ENS and [EIP 1078](https://eips.ethereum.org/EIPS/eip-1078) for universal login with, [EIP 1077](https://eips.ethereum.org/EIPS/eip-1077) gas relayer, [ERC 725](https://eips.ethereum.org/EIPS/eip-725) proxy identity, and [ERC 735](https://github.com/ethereum/EIPs/issues/735) claim holder to create a fail-safe key management solution and empower noobs with a terrific user experience.
 
-![Diagram Block ID Structure](https://raw.githubusercontent.com/ETHBuenosAires-Doiim/BlockID/master/docs/BlockIDstructure.png) 
+
+![Diagram Block ID Structure](https://raw.githubusercontent.com/ETHBuenosAires-Doiim/BlockID/master/docs/Structure.png) 
 
 
 * Create a dynamic digital identity that’s issued by a certificate authority and link it to a Ethereum/RSK private key so it can be used to provide a simple and secure way to login and interact with the financial system, judicial system, unions, issue invoices, access public services, interact with the government service’s online systems, pay taxes, claim rights and sign contracts that are legally binding and equivalent to handwritten signatures. All in a much simpler manner and closely resembling some current two factor login implementations. The user just need to provide it’s ENS username and authorise it through an app in any device.
