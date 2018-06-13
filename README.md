@@ -1,6 +1,6 @@
 # bID - Legally Binding Blockchain Identity
 
-### Link a blockchain private key to a CA key issued by the root key of the Brasil government’s PKI tree and to any institution authorised to make claims on behalf of individuals such as issuers of driver’s licences, voter’s tittle, social security and so on. Using ENS and [EIP 1078](https://eips.ethereum.org/EIPS/eip-1078) for universal login with, [EIP 1077](https://eips.ethereum.org/EIPS/eip-1077) gas relayer, [ERC 725](https://eips.ethereum.org/EIPS/eip-725) proxy identity, and [ERC 735](https://github.com/ethereum/EIPs/issues/735) claim holder to create a fail-safe key management solution and empower noobs with a terrific user experience.
+### Link a blockchain private key to a CA key issued by the root key of the Brasil government’s PKI tree and to any institution authorised to make claims on behalf of individuals such as issuers of driver’s licences, voter’s tittle, passport, social security, health insurance and so on. Using ENS and [EIP 1078](https://eips.ethereum.org/EIPS/eip-1078) for universal login with, [EIP 1077](https://eips.ethereum.org/EIPS/eip-1077) gas relayer, [ERC 725](https://eips.ethereum.org/EIPS/eip-725) proxy identity, and [ERC 735](https://github.com/ethereum/EIPs/issues/735) claim holder to create a fail-safe key management solution and empower noobs with a terrific user experience.
 
 
 ![Diagram Block ID Structure](https://raw.githubusercontent.com/ETHBuenosAires-Doiim/BlockID/master/docs/Structure.png) 
