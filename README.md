@@ -14,11 +14,6 @@
 * Using claims the  environment do not need for a central registry of them, all claims that a individual has is stored on his own identity. Also is possible that user request for an Certifier Validator any signed claim off-chain and add the certifier claim to his identity by himself.
 
 ![Diagram Certifier Validator](https://raw.githubusercontent.com/ETHBuenosAires-Doiim/bID/master/docs/CertificateValidator.png) 
-* As this signatures are legally binding, people can get into loan agreements with another party such as on the Ripio Credit Network where the lender, the borrower, the cosigner, the credit scoring agent and the ID verifier are all attesting their real world identity through blockchain signatures using claims. They can also attests that they are entitled to participate in an ICO and are accredited to trade restricted tokens through the TPL protocol
-
-* With a dynamic identity documents can be revoked and replaced, reducing troubles for the user. They are quiet common in Brasil. Digital certificates are issued representing a digital identity to verify a citizen, company or institution. The governments holds the root key  through [ICP (PKI) - Brasil](http://www.iti.gov.br/icp-brasil), does the issuance of the certificates and partners with the private sector to enable the access to the system.
-
-* ICP (PKI) - Brasil was appointed several times as a reference model on 8/11/17 in a public hearing in the US senate. Paulino de Rego Barros, and Richard smith, respectively previous and current interim CEO of Equifax were present along with Marisa Mayer. Where they discussed consumer protection in the information age in the face of several hacks and data breaches, such as Equifax’s which affected 145 million people and Yahoo’s 3 billion users.
 
 ### Claim verification
 
@@ -27,3 +22,9 @@
 * In case of governamental institutions that hold a lot of users informations, they could store all users hashes on a IPFS uri. In this case, when someone request a loan, the user could send to the lender contract his personal data encrypted with the lender public key. So it's possible access different institutions contracts to get their IPFS data and check if user hash match with some entry.
 
 ![Claims Verification](https://raw.githubusercontent.com/ETHBuenosAires-Doiim/bID/master/docs/ClaimsVerification.png) 
+
+* As this signatures are legally binding, people can get into loan agreements with another party such as on the Ripio Credit Network where the lender, the borrower, the cosigner, the credit scoring agent and the ID verifier are all attesting their real world identity through blockchain signatures using claims. They can also attests that they are entitled to participate in an ICO and are accredited to trade restricted tokens through the TPL protocol
+
+* With a dynamic identity documents can be revoked and replaced, reducing troubles for the user. They are quiet common in Brasil. Digital certificates are issued representing a digital identity to verify a citizen, company or institution. The governments holds the root key  through [ICP (PKI) - Brasil](http://www.iti.gov.br/icp-brasil), does the issuance of the certificates and partners with the private sector to enable the access to the system.
+
+* ICP (PKI) - Brasil was appointed several times as a reference model on 8/11/17 in a public hearing in the US senate. Paulino de Rego Barros, and Richard smith, respectively previous and current interim CEO of Equifax were present along with Marisa Mayer. Where they discussed consumer protection in the information age in the face of several hacks and data breaches, such as Equifax’s which affected 145 million people and Yahoo’s 3 billion users.
