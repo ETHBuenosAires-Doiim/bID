@@ -10,15 +10,15 @@
 
 * With this implementation the user doesn’t even have to know what blockchain, Ethereum, or gas means. They will simply purchase an electronic identity from a certificate authority, do the standard process of document validation and KYC procedures along with biometric  verification. After that they will download an app, where they can do the traditional signing method recognised  and standardised by ICANN and also sign transactions, messages and contracts with their own disposable Ethereum/RSK private key, all within the same app. All without any cryptocurrencies because the CA in charge of issuing the identities will act as gas relayer and pay for all the transactions cost which were already charged during the creation of the key. And they will also be able to issue as many identities as are necessary and revoke them as needed because they will be in charge of the key management and authorisation procedures.
 
-* Using claims the  environment do not need for a central registry of them, all claims that a individual has is stored on his own identity. Also is possible that user request for an Certifier Validator any signed claim off-chain and add the certifier claim to his identity by himself.
+* Using claims the environment dosen't need a central registry of them, all claims that a individual has is stored on his own identity. Also it is possible that a user requests Certifier Validator's signed claims off-chain and add the certifier claim to his identity by himself.
 
 ![Diagram Certifier Validator](https://raw.githubusercontent.com/ETHBuenosAires-Doiim/bID/master/docs/CertificateValidator.png) 
 
 ### Claim verification
 
-* Claims could be verified using both on-chain or off-chain solution. Basically our idea is to have some fields on "data" contained on claims to store a hash of personal informations. This personal information isn't stored on contract or claims, it should be send to some "Inspector" (in the case below, the lender), so he could verify the autenticity of the claim made by issuer checking its signature and checking the personal identity data with hash contained on claim.
+* Claims could be verified using both on-chain or off-chain solutions. Basically our idea is to have some fields on "data" contained on claims to store a hash of personal informations. This personal information isn't stored on contract or claims, it should be send to some "Inspector" (in the case below, the lender), so he could verify the autenticity of the claim made by the issuer checking its signature and checking the personal identity data with hash contained on claim.
 
-* In case of governamental institutions that hold a lot of users informations, they could store all users hashes on a IPFS uri. In this case, when someone request a loan, the user could send to the lender contract his personal data encrypted with the lender public key. So it's possible access different institutions contracts to get their IPFS data and check if user hash match with some entry.
+* In case of governamental institutions that hold a lot of users informations, they could store all users hashes on a IPFS uri. In this case, when someone request a loan, the user could send to the lender contract his personal data encrypted with the lender public key. So it's possible to access different institutions contracts to get their IPFS data and check if user hash match with some entry.
 
 ![Claims Verification](https://raw.githubusercontent.com/ETHBuenosAires-Doiim/bID/master/docs/ClaimsVerification.png) 
 
